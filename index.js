@@ -43,6 +43,9 @@ async function isexist(req, res, next) {
     }
 }
 // Route 1 = signup authentication not required
+app.get('/', (req, res) => {
+    res.send("hello world")
+})
 app.post('/signup', checkEmail, isexist, (req, res) => {
     const name = req.body.name;
     const username = req.body.username;
